@@ -26,7 +26,8 @@ module.exports = {
                 title: 'UI',
                 collapsable: false,
                 children: [
-                    { title: '布局', path: '/UI/row' },
+                    { title: 'Layout 布局', path: '/UI/row' },
+                    { title: 'Switch 开关', path: '/UI/switch' },
                     // { title: '生活测试02', path: '/life/life02' },
                     // { title: '生活测试03', path: '/life/life03' },
                 ]
