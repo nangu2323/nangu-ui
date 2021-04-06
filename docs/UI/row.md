@@ -1,3 +1,413 @@
+# Layout 布局
+ 基于flex布局的封装
+### 等分 间隔
+<br/>
+
+<div>
+  <li-row :gutter="10">
+      <li-col>
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+  </li-row>
+    <li-row :gutter="10">
+      <li-col>
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+       <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+  </li-row>
+  <li-row :gutter="10">
+    <li-col>
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col>
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row>
+</div>
+
+
+<style>
+  .li-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .content{
+    /* background: blue; */
+    border-radius: 4px;
+    min-height: 36px;
+  }
+</style>
+::: details  点击查看代码
+```js
+<div>
+  <li-row :gutter="10">
+      <li-col>
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+  </li-row>
+    <li-row :gutter="10">
+      <li-col>
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+       <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+  </li-row>
+  <li-row :gutter="10">
+    <li-col>
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col>
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row>
+</div>
+
+<style>
+  .li-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .content{
+    /* background: blue; */
+    border-radius: 4px;
+    min-height: 36px;
+  }
+</style>
+```
+:::
+
+
+### 固定一边或两边
+<br/>
+<div>
+  <li-row>
+      <li-col :width="120">
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+       <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+  </li-row>
+  <li-row>
+    <li-col :width="120">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="120">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row>
+</div>
+
+::: details  点击查看代码
+```js
+<div>
+  <li-row>
+      <li-col :width="120">
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+       <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+  </li-row>
+  <li-row>
+    <li-col :width="120">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col>
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="120">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row>
+</div>
+
+
+<style>
+  .li-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .content{
+    /* background: blue; */
+    border-radius: 4px;
+    min-height: 36px;
+  }
+</style>
+```
+:::
+
+### 偏移
+<br/>
+<div>
+    <li-row>
+      <li-col :width="100">
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+       <li-col  :left="180" >
+        <div class="content bg-purple"></div>
+    </li-col>
+  </li-row>
+  <li-row>
+    <li-col :width="100" >
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :left="180">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :left="180">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row>
+</div>
+
+::: details  点击查看代码
+```js
+<div>
+    <li-row>
+      <li-col :width="100">
+          <div class="content bg-purple-dark"></div>
+      </li-col>
+       <li-col  :left="180" >
+        <div class="content bg-purple"></div>
+    </li-col>
+  </li-row>
+  <li-row>
+    <li-col :width="100" >
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :left="180">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :left="180">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row>
+</div>
+
+
+<style>
+  .li-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .content{
+    /* background: blue; */
+    border-radius: 4px;
+    min-height: 36px;
+  }
+</style>
+```
+:::
+
+
+### 行布局
+</br>
+<div>
+  <li-row justify="flex-start">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+   <li-row>
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+  <li-row justify="flex-end">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+   <li-row justify="space-between">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+   <li-row justify="space-around">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+
+  </div>
+  
+::: details  点击查看代码
+```js
+<div>
+  <li-row justify="flex-start">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+   <li-row>
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+  <li-row justify="flex-end">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+   <li-row justify="space-between">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+   <li-row justify="space-around">
+    <li-col :width="150">
+        <div class="content bg-purple-dark"></div>
+    </li-col>
+    <li-col :width="150">
+        <div class="content bg-purple"></div>
+    </li-col>
+     <li-col :width="150">
+        <div class="content bg-purple-light"></div>
+    </li-col>
+  </li-row> 
+
+  </div>
+
+
+<style>
+  .li-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .content{
+    /* background: blue; */
+    border-radius: 4px;
+    min-height: 36px;
+  }
+</style>
+```
+:::
+
+### row 源码
+<br/>
+
 ::: details 点击查看代码
 ```js
 <script>
@@ -110,7 +520,8 @@
 ```
 :::
 
-
+### col 源码
+<br/>
 
 ::: details 点击查看代码
 ```js
@@ -168,3 +579,26 @@
 </style>
 ```
 :::
+
+
+### Row Attributes
+</br>
+
+| 参数        | 说明           | 类型  | 可选值        | 默认值         |
+| ------------- |:-------------:| -----:| ------------- |:-------------:|
+| justify     | flex 布局下的水平排列方式    | string   |flex-start/flex-end/center/space-around/space-between     | center | 
+| align       | flex 布局下的垂直排列方式    |   string |flex-start/flex-end/centers                               | center | 
+| warp        | flex 换行                    |   string |nowarp/warp/wrap-reverse                                  | nowarp |
+| direction   | flex 方向                    |   string |row/row-reverse/column/column-reverse                     | row    |
+| gutter      | 间隔                         |   number | ---                                                      | 0      |
+
+### Col Attributes
+</br>
+
+| 参数        | 说明           | 类型  | 可选值        | 默认值         |
+| ------------- |:-------------:| -----:| ------------- |:-------------:|
+| left          | 距离右侧距离               |   number |---                                                       | 0       | 
+| right         | 距离左侧距离               |   number |---                                                       | 0       | 
+| width         |  固定宽度                  |   number |  ---                                                     | 0       |
+| textAlign     |  水平排列方式              |   string |start/center/end                                          | start    |
+| tag           | 自定义元素标签             |   string | ---                                                      |  div     |
