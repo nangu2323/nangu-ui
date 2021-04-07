@@ -1,3 +1,89 @@
+# Switch 开关
+提供多种可供的设备选项
+
+
+###  基本用法
+绑定一个Boolean类型的变量。可以使用active-color属性与inactive-color属性来设置开关的背景色
+<br/>
+
+<div class="content">
+  <li-switch  v-model="value" active-color="#1781b5"
+  inactive-color="#a7535a"></li-switch>
+</div>
+
+
+::: details 点击查看代码
+```js
+<div class="content">
+  <li-switch  v-model="value" active-color="#1781b5"
+  inactive-color="#a7535a"></li-switch>
+</div>
+
+<script>
+export default {
+    data(){
+      return{
+        value:false
+      }
+    }
+};
+</script>
+
+```
+:::
+
+###  文字描述
+active-text与inactive-text来设置开关的文字描述。
+
+<div class="content">
+  <li-switch  v-model="value1" active-text="按月付费"
+  inactive-text="按年付费" ></li-switch>
+</div>
+
+<script>
+export default {
+    data(){
+      return{
+        value:false,
+        value1:false
+      }
+    }
+};
+</script>
+::: details 点击查看代码
+```js
+<div class="content">
+  <li-switch  v-model="value1" active-text="按月付费"
+  inactive-text="按年付费" ></li-switch>
+</div>
+
+<script>
+export default {
+    data(){
+      return{
+        value1:false
+      }
+    }
+};
+</script>
+
+```
+:::
+
+<style>
+  .content{
+    width:100%;
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+  }
+
+</style>
+
+
+
 ::: details 点击查看代码
 ```js
 <template>
