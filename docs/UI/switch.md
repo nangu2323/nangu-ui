@@ -34,10 +34,13 @@ export default {
 
 ###  文字描述
 active-text与inactive-text来设置开关的文字描述。
-
+<br/>
+activefontColor与inactivefontColor来设置开关的文字初始颜色
+<br/>
+activeColor与inactiveColor来设置开关不同状态的颜色
 <div class="content">
-  <li-switch  v-model="value1" active-text="按月付费"
-  inactive-text="按年付费" ></li-switch>
+  <li-switch  v-model="value1" active-text="激活文字"  activefontColor="#5698c3"
+  inactive-text="未激活文字" inactivefontColor="#12aa9c"  ></li-switch>
 </div>
 
 <script>
@@ -45,30 +48,57 @@ export default {
     data(){
       return{
         value:false,
-        value1:false
+        value1:false,
+        value2:false,
+        value3:true
       }
     }
 };
 </script>
+
 ::: details 点击查看代码
 ```js
 <div class="content">
-  <li-switch  v-model="value1" active-text="按月付费"
-  inactive-text="按年付费" ></li-switch>
+  <li-switch  v-model="value1" active-text="激活文字"  activefontColor="#5698c3"
+  inactive-text="未激活文字" inactivefontColor="#12aa9c"  ></li-switch>
 </div>
 
 <script>
 export default {
     data(){
       return{
-        value1:false
+        value1:false,
+        value2:false
       }
     }
 };
 </script>
+```
+:::
+
+### 禁用状态
+
+设置disabled属性，接受一个Boolean，设置true即可禁用。
+<div class="content">
+  <li-switch  v-model="value2"  activefontColor="#5698c3" :disabled="true"
+  inactivefontColor="#12aa9c"  ></li-switch>
+  <li-switch  v-model="value3"  activefontColor="#5698c3" :disabled="true"
+  inactivefontColor="#12aa9c"  ></li-switch>
+</div>
+
+::: details 点击查看代码
+```js
+  <div class="content">
+  <li-switch  v-model="value2"  activefontColor="#5698c3" :disabled="true"
+  inactivefontColor="#12aa9c"  ></li-switch>
+  <li-switch  v-model="value3"  activefontColor="#5698c3" :disabled="true"
+  inactivefontColor="#12aa9c"  ></li-switch>
+</div>
 
 ```
 :::
+
+
 
 <style>
   .content{
@@ -83,6 +113,8 @@ export default {
 </style>
 
 
+### Switch 源码
+<br/>
 
 ::: details 点击查看代码
 ```js
@@ -117,9 +149,7 @@ export default {
                 default: false
             },
             width: Number,
-            // bug 
             coreHeight: Number,
-            // bug 
             innerHeight: Number,
             activeIconClass: {
                 type: String,
@@ -317,3 +347,15 @@ export default {
 </style>
 ```
 :::
+
+
+### Switch Attributes
+</br>
+
+| 参数        | 说明           | 类型  | 可选值        | 默认值         |
+| ------------- |:-------------:| -----:| ------------- |:-------------:|
+| value     | 绑定值开关状态    | boolean|—   | — | 
+| width       | fswitch 的宽度  | number |—   | center | 
+| warp        | flex 换行       |   string |nowarp/warp/wrap-reverse                                  | nowarp |
+| direction   | flex 方向       |   string |row/row-reverse/column/column-reverse                     | row    |
+| gutter      | 间隔            |   number | ---    | 0      |
