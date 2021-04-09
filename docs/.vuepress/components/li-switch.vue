@@ -83,11 +83,11 @@
             },
             activefontColor: {
                 type: String,
-                default: 'red'
+                default: '#1781b5'
             },
             inactivefontColor: {
                 type: String,
-                default: 'blue'
+                default: '#a7535a'
             }
         },
         data() {
