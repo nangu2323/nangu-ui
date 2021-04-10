@@ -211,11 +211,11 @@ export default {
             },
             activefontColor: {
                 type: String,
-                default: 'red'
+                default: '#1781b5'
             },
             inactivefontColor: {
                 type: String,
-                default: 'blue'
+                default: '#a7535a'
             }
         },
         data() {
@@ -355,7 +355,13 @@ export default {
 | 参数        | 说明           | 类型  | 可选值        | 默认值         |
 | ------------- |:-------------:| -----:| ------------- |:-------------:|
 | value     | 绑定值开关状态    | boolean|—   | — | 
-| width       | fswitch 的宽度  | number |—   | center | 
-| warp        | flex 换行       |   string |nowarp/warp/wrap-reverse                                  | nowarp |
-| direction   | flex 方向       |   string |row/row-reverse/column/column-reverse                     | row    |
-| gutter      | 间隔            |   number | ---    | 0      |
+| width       | switch 的宽度   | number |—   | 40 | 
+| activeIconClass| 激活状态图标类名     |   string |—— | —— |
+| inactiveIconClass| 未激活状态图标类名 |   string |—— | —— |
+| activeText     | 激活状态文字     |   string | ---    | ---      |
+| inactiveText   | 未激活状态文字    |   string | ---    | ---     |
+| activeColor   | 激活状态文字颜色    |   string | ---    | ---     |
+| inactiveColor   | 未激活状态文字颜色 |   string | ---    | ---     |
+
+
+
