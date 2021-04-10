@@ -29,9 +29,7 @@
                 default: false
             },
             width: Number,
-            // bug 
             coreHeight: Number,
-            // bug 
             innerHeight: Number,
             activeIconClass: {
                 type: String,
@@ -52,14 +50,6 @@
             },
             inactiveText: String,
             disabled: {
-                type: Boolean,
-                default: false
-            },
-            activeValue: {
-                type: Boolean,
-                default: true
-            },
-            inactiveValue: {
                 type: Boolean,
                 default: false
             },
@@ -93,11 +83,11 @@
             },
             activefontColor: {
                 type: String,
-                default: 'red'
+                default: '#1781b5'
             },
             inactivefontColor: {
                 type: String,
-                default: 'blue'
+                default: '#a7535a'
             }
         },
         data() {
@@ -185,7 +175,7 @@
 
 
     .li-switch__core {
-        margin: 0;
+        margin: 0 6px;
         position: relative;
         width: 40px;
         height: 20px;
