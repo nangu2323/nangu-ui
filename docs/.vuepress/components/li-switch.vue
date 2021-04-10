@@ -168,7 +168,6 @@
         /* line-height: 20px;
       height: 20px; */
         vertical-align: middle;
-        border: 1px solid red;
     }
 
     .li-switch.is-disabled .li-switch__core,
