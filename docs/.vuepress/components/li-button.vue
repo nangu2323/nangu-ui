@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        name: 'Button',
+        name: 'li-button',
         componentName: 'liButton',
         props: {
             loading: {
@@ -35,7 +35,9 @@
 </script>
 <style scoped>
     .li-button {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: 1;
         white-space: nowrap;
         cursor: pointer;
@@ -43,7 +45,6 @@
         border: 1px solid #DCDFE6;
         color: #606266;
         -webkit-appearance: none;
-        text-align: center;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         outline: 0;
@@ -93,10 +94,22 @@
     .li-icon-loading {
         display: inline-block;
         margin-left: 5px;
-        width: 10px;
-        height: 10px;
+        width: 20px;
+        height: 20px;
         line-height: 1;
-        background-color: red;
-        background: url(../assets/loading.png) no-repeat left top;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-image: url(../public/image/loading.png);
+        animation: test 1s linear infinite;
+    }
+
+    @keyframes test {
+        form {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 </style>
