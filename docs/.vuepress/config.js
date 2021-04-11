@@ -28,6 +28,7 @@ module.exports = {
                 children: [
                     { title: 'Layout 布局', path: '/UI/row' },
                     { title: 'Switch 开关', path: '/UI/switch' },
+                    { title: 'Button 按钮', path: '/UI/button' },
                     // { title: '生活测试02', path: '/life/life02' },
                     // { title: '生活测试03', path: '/life/life03' },
                 ]
