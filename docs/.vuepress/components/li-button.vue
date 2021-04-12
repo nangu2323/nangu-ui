@@ -3,7 +3,7 @@
         <span v-if="$slots.default">
             <slot></slot>
         </span>
-        <i class="li-icon-loading" v-if="loading"></i>
+        <i :class="loadingClass" v-if="loading"></i>
     </button>
 </template>
 
@@ -15,6 +15,10 @@
             loading: {
                 type: Boolean,
                 default: true
+            },
+            loadingClass: {
+                type: String,
+                default: 'li-icon-loading'
             }
         },
         data() {
@@ -100,6 +104,30 @@
         background-size: 20px 20px;
         background-repeat: no-repeat;
         background-image: url(../public/image/loading.png);
+        animation: test 1s linear infinite;
+    }
+
+    .li-icon-loading1 {
+        display: inline-block;
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        line-height: 1;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-image: url(../public/image/loading1.png);
+        animation: test 1s linear infinite;
+    }
+
+    .li-icon-loading2 {
+        display: inline-block;
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        line-height: 1;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-image: url(../public/image/loading2.png);
         animation: test 1s linear infinite;
     }
 

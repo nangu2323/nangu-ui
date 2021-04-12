@@ -5,7 +5,13 @@
 <br/>
 
 <div>
-  <li-button>
-    按钮
+  <li-button loadingClass="li-icon-loading">
+    加载状态
+  </li-button>
+    <li-button loadingClass="li-icon-loading1">
+    加载状态1
+  </li-button>
+    <li-button loadingClass="li-icon-loading2">
+    加载状态2
   </li-button>
 </div>
